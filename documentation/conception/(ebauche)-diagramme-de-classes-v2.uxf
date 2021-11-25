@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>10</x>
+      <y>10</y>
+      <w>260</w>
+      <h>360</h>
+    </coordinates>
+    <panel_attributes>/Order/
+--
+-id:string (uuid)
+
+-address:Address
+
+-createdAt:DateTime
+-acceptedAt:DateTime | null
+-cookedAt:DateTime | null
+-settledAt:DateTime | null
+-estimatedCookingTime:DateTime | null
+
+-status:OrderStatus
+
+-referenceCustomer:User
+-guests:User[ ]
+
+-payments:OrderTransaction[ ]
+
+-restaurant:Restaurant
+
+-restaurantChat:Message[ ]
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>10</x>
+      <y>390</y>
+      <w>230</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>DeliveryOrder
+--
+-estiamtedDeliveryTime:DateTime
+
+-deliveryMan:User
+
+-deliveryChat:Message[ ]
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1000</x>
+      <y>190</y>
+      <w>230</w>
+      <h>200</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;enum&gt;&gt;
+Role
+--
++REGISTERED_USER:string
++UNREGISTERED_USER:string
++ADMIN:string
++CUSTOMER:string
++REFERENCE_CUSTOMER:string
++RESTAURANT_STAFF:string
++RESTAURANT_OWNER:string
++DELIVERY_MAN:string
++HIRED_DELIVERY_MAN:string</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>260</x>
+      <y>380</y>
+      <w>230</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>/RemoteOrder/
+--
+-estimatedTripDuration:DateTime
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>530</x>
+      <y>400</y>
+      <w>130</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>TableServiceOrder
+--
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>370</x>
+      <y>10</y>
+      <w>140</w>
+      <h>170</h>
+    </coordinates>
+    <panel_attributes>Message
+--
+-id:int
+
+-content:string
+
+-authorName:string
+-authorType:Role
+
+-postedAt:DateTime
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1020</x>
+      <y>10</y>
+      <w>210</w>
+      <h>150</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;enum&gt;&gt;
+OrderStatus
+--
++PENDING:string
++FULLFILLED:string
++REJECTED:string
++CLIENT_FAULT:string
++RESTAURANT_FAULT:string
++DELIVERY_FAULT:string</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>850</x>
+      <y>500</y>
+      <w>140</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>Cart
+--
+-id:int
+
+-user:User
+-products:Product[ ]</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>870</x>
+      <y>190</y>
+      <w>120</w>
+      <h>200</h>
+    </coordinates>
+    <panel_attributes>User
+--
+-id:string (uuid)
+
+-firstName:string
+-lastName:string
+
+-mail:string | null
+
+-cart:Cart | null
+
+-roles:Role[ ]</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1010</x>
+      <y>400</y>
+      <w>220</w>
+      <h>250</h>
+    </coordinates>
+    <panel_attributes>RegisteredUser
+--
+-username:string
+
+-password:string
+
+-phoneNumber:string
+-address:Address
+
+-orders:Order[ ]
+
+-gallery:Image[ ]
+
+-favoriteRestaurants:Restaurant[ ]
+-favoriteProducts:Product[ ]</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>520</x>
+      <y>10</y>
+      <w>180</w>
+      <h>230</h>
+    </coordinates>
+    <panel_attributes>Transaction
+--
+-id:string (uuid)
+
+-from:User
+-to:User
+
+-total:float
+
+-createdAt:DateTime
+-paidAt:DateTime | null
+
+-method:PaymentMethod
+-status:TransactionStatus</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>730</x>
+      <y>10</y>
+      <w>150</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>TransactionStatus
+--
++PAID:string
++UNPAID:string
++CANCELLED:string</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>730</x>
+      <y>100</y>
+      <w>160</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>PaymentMethod
+--
++CREDIT_CARD:string
++PAYPAL:string
+...etc</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>730</x>
+      <y>250</y>
+      <w>120</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>OrderTransaction
+--
+-order:Order</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>90</x>
+      <y>520</y>
+      <w>120</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>TakeAwayOrder
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>240</x>
+      <y>520</y>
+      <w>120</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>DriveOrder
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>380</x>
+      <y>520</y>
+      <w>180</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>TableReservationOrder
+--
+-tableReference:string
+
+-numberOfPeople:int
+
+-</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>

@@ -1,0 +1,122 @@
+<!-- La template HTML de la page d'accueil -->
+<!-- La directive "ng-controller" indique que tout ce qui est dans la <div> est contrôlé par le contrôleur "HomeController". -->
+<div class="w3-margin" ng-controller="HomeController">
+
+    <style>
+        * {
+          text-align: center;  
+        }
+    </style>
+    
+
+    <br>
+
+    <h2>Page d'accueil</h2>
+
+    <p>Cette page est en construction...</p>
+
+    <p>Le contenu de la variable <strong>message</strong> est : {{ message }}</p>
+
+    <h3>Modifiez-le !</h3>
+
+    <!-- Un élément <input> pour modifier la valeur de la variable "message" définie par HomeController. -->
+    <input class="w3-input w3-animate-input" type="text" ng-model="message">
+    <span class="bar"></span>
+    <label class="w3-label w3-text-dark-grey">{{ message }}</label>
+
+    <h2>Les pages de l'application</h2>
+
+    <p>
+        Ci-dessous, une liste des pages de l'application dont une vue est disponible. 
+        Ces pages sont en construction, et ne sont pas encore correctement reliées entre elles. 
+        Modifiez-les, et créez-en de nouvelles !
+    </p>
+
+    <br><br>
+
+    <button ng-click="goToIphone11ProX26()" type="button" class="w3-btn w3-red w3-round-small">Page "Se connecter"</button>
+
+    <br><br>
+
+    <button ng-click="goToIphone11ProX27()" type="button" class="w3-btn w3-red w3-round-small">Page "S'inscrire"</button>
+
+    <br><br>
+
+    <button ng-click="goToIphone11ProX13()" type="button" class="w3-btn w3-red w3-round-small">Page "Informations Utilisateur"</button>
+
+    <br><br>
+
+    <button ng-click="goToIphone11ProX4()" type="button" class="w3-btn w3-red w3-round-small">Page "Choisir une adresse"</button>
+
+    <br><br>
+
+    <button ng-click="goToIphone11ProX20()" type="button" class="w3-btn w3-red w3-round-small">Page "Modification Informations <br/> Utilisateur"</button>
+
+    <br><br>
+
+    <button ng-click="goToIphone11ProX41()" type="button" class="w3-btn w3-red w3-round-small">Page "Ajout des horaires"</button>
+
+    <br><br>
+
+    <button ng-click="goToIphone11ProX16a()" type="button" class="w3-btn w3-red w3-round-small">Page "Informations Restaurant"</button>
+
+    <br><br>
+
+    <button ng-click="goToIphone11ProX9()" type="button" class="w3-btn w3-red w3-round-small">Page "Compte Utilisateur"</button>
+
+    <br><br>
+
+    <button ng-click="goToIphone11ProX14()" type="button" class="w3-btn w3-red w3-round-small">Page "Compte Restaurant"</button>
+
+    <br><br>
+
+    <button ng-click="goToIphone11ProX10()" type="button" class="w3-btn w3-red w3-round-small">Page "Menu"</button>
+
+    <br><br>
+
+    <button ng-click="goToIphone11ProX42()" type="button" class="w3-btn w3-red w3-round-small">Page "Commande"</button>
+
+    <br><br>
+
+    <button ng-click="goToIphone11ProX43()" type="button" class="w3-btn w3-red w3-round-small">Page "Publication"</button>
+
+    <br><br>
+
+    <button ng-click="goToIphone11ProX45()" type="button" class="w3-btn w3-red w3-round-small">Page "Recherche de lieu"</button>
+
+    <br><br>
+
+    <button ng-click="goToIphone11ProX1()" type="button" class="w3-btn w3-red w3-round-small">Page "Chargement"</button>
+
+    <br><br>
+
+    <button ng-click="goToIphone11ProX5()" type="button" class="w3-btn w3-red w3-round-small">Page "Recherche de restaurant"</button>
+
+    <br><br>
+
+    <button ng-click="goToIphone11ProX7()" type="button" class="w3-btn w3-red w3-round-small">Page "Restaurant"</button>
+
+    <br><br>
+
+    <button ng-click="goToIphone11ProX16b()" type="button" class="w3-btn w3-red w3-round-small">Page "Modification Informations <br/> Restaurant"</button>
+
+    <br><br>
+
+    <button ng-click="goToIphone11ProX11()" type="button" class="w3-btn w3-red w3-round-small">Page "Restaurants Favoris"</button>
+
+    <br><br>
+
+    <button ng-click="goToIphone11ProX12()" type="button" class="w3-btn w3-red w3-round-small">Page "Historique d'achats"</button>
+
+    <br><br>
+
+    <button ng-click="goToIphone11ProX5Filters()" type="button" class="w3-btn w3-red w3-round-small">Page "Filtres"</button>
+
+    <br><br>
+
+    <!-- Un bouton permettant de rediriger l'utilisateur vers la route nommée "about" (la page "About"). -->
+    <!-- Lorsque le bouton est cliqué, la fonction "goToAbout" définie dans HomeController est appelée.  -->
+    <!-- C'est cette fonction qui effectue la redirection. -->
+    <button ng-click="goToAbout()" type="button" class="w3-btn w3-red w3-round-small">Page "About"</button>
+    
+</div>

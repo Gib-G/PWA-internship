@@ -1,0 +1,124 @@
+<div ng-controller="Iphone11ProX7Controller">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" href="../../css/iphone-11-pro-x-7.css">
+	<body>		
+		<div>
+			<!-------------------------- BARRE DE NAVIGATION -------------------------->
+			<div id="navbar">
+				<button onclick="history.back()">—  Retour</button>	
+			</div>			
+			
+			<!-- ------------------------ C0NTENU PRINCIPAL  ------------------------ -->
+			<div id="maincontent-container">
+				<!-------------------------- PHOTO DU RESTAURANT -------------------------->
+				<div id="profile-picture" style="background-color: #004413;">
+					<img style="margin: 5% auto;" src="../../assets/mcdonalds-logo.svg"/>
+				</div>
+
+				<!-------------------------- INFORMATIONS SUR LE RESTAURANT -------------------------->				
+				<div id="restaurant-infos">
+					<div id="first-line">
+						<h2>McDonald (Porte De Bagnolet)</h2>
+						<button><img src="../../assets/favorite-icon.svg"></button>						
+						<button><img src="../../assets/phone-icon.svg"></button>
+					</div>					
+					<p>49 Rue Belgrand, 75020 Paris</p>
+				</div>				
+
+				<div>
+					<!-------------------------- LES HORAIRES -------------------------->
+					<div class="box" id="hours-box">
+						<button>
+							<img id="test" src="../../assets/open-scroll.svg">
+							<p>Horaires</p>
+							<p id="open-closed"></p>
+						</button>						
+						<div id="hours">
+							<ul id="hours-list">
+								<li id="day1">Dimanche - Jeudi : 10:00 - 02:00</li>
+								<li id="day2">Vendredi - Samedi : 10:00 - 06:00</li>
+							</ul>
+						</div>
+					</div>
+
+					<!-------------------------- LE MENU -------------------------->
+					<div class="box" id="menu-box">
+						<button>
+							<img src="../../assets/open-scroll.svg">
+							<p>Menu</p>
+						</button>
+						<div id="menu-content">
+							<div id="menu-navbar">
+								<a ng-click="goToFunction('menus-title')">Nos Menus</a>
+								<a ng-click="goToFunction('burgers-title')">Nos Burgers</a>
+								<a ng-click="goToFunction('salads-title')">Nos Salades</a>
+							</div>
+							<h2 id="menus-title">Nos Menus</h2>
+							<div class="category" ng-repeat="x in menus">
+								
+								<a ng-href="{{x.page}}">
+									<div>
+										<h3>{{x.name}}</h3>
+										<p style="font-size: 12px;">{{x.price}}</p>
+										<p class="menu-composition">{{x.menuComposition}}</p>
+										<p class="menu-composition">+ 1 accompagnement</p>
+										<p class="menu-composition">+ 1 boisson</p>
+									</div>
+									<img ng-src="{{x.image}}">	
+								</a>
+							</div>		
+
+							<h2 id="burgers-title">Nos Burgers</h2>							
+							<div class="category" ng-repeat="x in burgers">
+								
+								<a ng-href="{{x.page}}">
+									<div>
+										<h3>{{x.name}}</h3>
+										<p style="font-size: 12px;">{{x.price}}</p>
+										<p class="menu-composition">{{x.menuComposition}}</p>
+										<p class="menu-composition">+ 1 accompagnement</p>
+										<p class="menu-composition">+ 1 boisson</p>
+									</div>
+									<img ng-src="{{x.image}}">	
+								</a>
+							</div>		
+
+							<h2 id="salads-title">Nos Salades</h2>
+							<div class="category" ng-repeat="x in salads">
+								
+								<a ng-href="{{x.page}}">
+									<div>
+										<h3>{{x.name}}</h3>
+										<p style="font-size: 12px;">{{x.price}}</p>
+										<p class="menu-composition">{{x.menuComposition}}</p>
+										<p class="menu-composition">+ 1 accompagnement</p>
+										<p class="menu-composition">+ 1 boisson</p>
+									</div>
+									<img ng-src="{{x.image}}">	
+								</a>
+							</div>	
+						</div>	
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-------------------------- FOOTER -------------------------->
+		<footer>
+			<a id="home" ng-href="/#/home">
+				<img src="../../assets/home.svg"/>
+			</a>
+
+			<a id="qr-code" ng-href="">					
+				<img src="../../assets/qr-code.svg"/>				
+			</a>				
+
+			<a id="my-account" ng-href="">
+				<img src="../../assets/my-account.svg"/>
+			</a>
+		</footer>	
+		<script src="../../js/iphone-11-pro-x-7.js"></script>	
+	</body>
+</div>

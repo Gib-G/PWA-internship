@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>230</x>
+      <y>10</y>
+      <w>170</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>@Mapped super-class
+/Groupe/
+--
+-nom:string|null
+-description:string|null</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>10</x>
+      <y>210</y>
+      <w>260</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>GroupeProduit
+--
+*-id:int*
+
+-restaurant:Restaurant
+-groupeParent:GroupeProduit|null
+
+-produits:Produit[ ]</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>360</x>
+      <y>210</y>
+      <w>280</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>GroupeIngredient
+--
+*-id:int*
+
+-produit:Produit
+-groupeParent:GroupeIngredient|null
+
+-ingredients:Ingredient[ ]
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>190</x>
+      <y>140</y>
+      <w>140</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>120.0;10.0;120.0;40.0;10.0;40.0;10.0;70.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>300</x>
+      <y>140</y>
+      <w>170</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;40.0;150.0;40.0;150.0;70.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>740</x>
+      <y>10</y>
+      <w>250</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>Restaurant
+--
+...
+-menu:GroupeProduit|null
+...
+-redirections:RedirectionRestaurant[ ]
+...</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>740</x>
+      <y>160</y>
+      <w>250</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>Produit
+--
+...
+-options:GroupeIngredient|null
+...
+-redirections:RedirectionProduit[ ]
+...</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>230</x>
+      <y>370</y>
+      <w>170</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>@Mapped super-class
+/Redirection/
+--
+-nom:string|null
+-description:string|null
+-types:TypeRedirection[ ]
+
+-url:string</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>10</x>
+      <y>570</y>
+      <w>260</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>RedirectionRestaurant
+--
+*-id:int*
+
+-restaurant:Restaurant</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>360</x>
+      <y>570</y>
+      <w>280</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>RedirectionProduit
+--
+*-id:int*
+
+-produit:Produit
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>190</x>
+      <y>500</y>
+      <w>140</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>120.0;10.0;120.0;40.0;10.0;40.0;10.0;70.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>300</x>
+      <y>500</y>
+      <w>170</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;40.0;150.0;40.0;150.0;70.0</additional_attributes>
+  </element>
+</diagram>

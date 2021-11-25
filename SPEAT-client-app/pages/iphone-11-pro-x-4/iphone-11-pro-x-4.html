@@ -1,0 +1,90 @@
+<div ng-controller="Iphone11ProX4Controller">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="text/css" rel="stylesheet" href="../../css/iphone-11-pro-x-4.css">
+
+    <!-- BARRE DE NAVIGATION -->
+    <header>
+
+        <nav id="navigation">
+
+            <div id="return">
+                <div id="line-1"><a ng-href="/#/home">Retour</a></div>
+            </div>
+
+        </nav>
+
+    </header>
+
+    <!---------------CONTENU PRINCIPAL--------------->
+
+    <!--Regroupe les deux principaux block hight et middle-->
+
+    <div id="hight-and-middle-block">
+
+        <!--Bloc contenant les deux barres de recherches-->
+        <div id="hight">
+
+            <div id="nouvelles-adresses"> Nouvelle Adresse </div>
+
+            <div class="barre-de-selection" id="adresse">
+                Adresse
+                <span style="position : relative;width: 20px;height: 20px;">
+                    <img src="../../assets/iphone-11-pro-x-4/Icône adresse 1.png" id="substract-1" alt="icons">
+                </span>
+            </div>
+
+            <div class="barre-de-selection" id="ville">
+                Ville
+                <span style="left: 130.5px;color: black;">|</span>
+                <span style="left: 206px;">Code Postal</span>
+            </div>
+
+        </div>
+
+        <hr id="line1" style="position : absolute;top : 138px;height: 2px; width : 100%;">
+        <span style="position : absolute;left : 20px;top:153px;">Lieu déjà utilisé</span>
+
+        <!--Bloc contenant les résultats de la barre de recherches sous formes de tableaux-->
+        <div id="middle">
+
+            <div class="result-location" ng-repeat="x in location">
+
+                <div class="icon-and-text-and-arrow">
+
+                    <div class="icon-and-text">
+
+                        <div class="location-icon">
+                            <img src="../../assets/iphone-11-pro-x-4/Subtract.png" class="substract-2" alt="icons">
+                        </div>
+
+                        <div class="location-text">{{x.Adresses}} <br>{{x.Ville}}</div>
+
+                    </div>
+
+                    <div class="arrow">
+                        <img src="../../assets/iphone-11-pro-x-4/Vector 1.png" class="substract-3" alt="icons">
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div>
+
+        <!---------------ENREGISTREMENT--------------->
+
+        <!--Div pour enregistrer au bas de page-->
+        <div id="register">
+            <div id="text-register">Enregistrer</div>
+        </div>
+
+        <footer></footer>
+
+    </div>
+
+</div>

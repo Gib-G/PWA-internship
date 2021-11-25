@@ -1,0 +1,26 @@
+QUELQUES RESSOURCES UTILES POUR LES DEVELOPPEURS FRONT
+------------------------------------------------------
+
+JS
+--
+
+-> Le cours de JS de Pierre Giraud : https://www.pierre-giraud.com/javascript-apprendre-coder-cours/introduction/
+
+AngularJS
+---------
+
+-> Cours de W3Schools sur AngularJS (très rapide et suffisant) : https://www.w3schools.com/angular/default.asp
+
+-> Tuto de Grafikart sur AngularJS : https://grafikart.fr/formations/angularjs
+
+APIs publiques (y'en a pour tout et n'importe quoi -> à utiliser !!)
+--------------------------------------------------------------------
+
+-> https://www.programmableweb.com/category/all/apis
+
+Cours divers de W3Schools
+-------------------------
+
+-> HTML : https://www.w3schools.com/html/default.asp
+-> CSS : https://www.w3schools.com/css/default.asp
+-> How To (à regarder !!) : https://www.w3schools.com/howto/default.asp

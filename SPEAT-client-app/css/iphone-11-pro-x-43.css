@@ -1,0 +1,275 @@
+/* -------------- IMPORT DES POLICES -------------- */
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@500&display=swap');
+
+
+
+/* -------------- CSS POUR L'ENSEMBLE DES PAGES -------------- */
+body {
+	font-family:'Work Sans', sans-serif;
+	margin: 0;
+	text-align: left;
+}
+
+p {
+	margin: 0px;
+}
+
+button {
+	border: none;
+	background: none;
+	cursor: pointer;
+}
+
+/* -------------- BARRE DE NAVIGATION -------------- */
+
+#navbar {
+	-webkit-box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.25);
+	-moz-box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.25);
+	box-shadow: 0 4px 25px -6px rgba(0, 0, 0, 0.25);
+	width: 100%;
+	height: 8vh;
+	align-items: center;
+}
+
+#navbar a {
+	text-decoration: none;
+	color: black;
+	font-weight: 600;
+	text-align: center;
+	font-size: 14px;
+	float: left;	
+  	padding: 2.5vh 2vh;
+}
+
+#navbar button {
+	font-weight: 600;
+	text-align: center;
+	font-size: 14px;
+	float: left;	
+  	padding: 2.5vh 1vh;
+	font-family:'Work Sans', sans-serif;
+	background: none;
+	border: none;
+	cursor: pointer;
+}
+
+/* ----------------------- CONTENU PRINCIPAL ----------------------- */
+
+#maincontent-container {
+	height: 79vh;
+}
+
+/* ----------------------- TITRE ----------------------- */
+
+h1 {
+	margin-top: 2%;
+	margin-left: 3%;
+}
+
+/* ----------------------- AJOUTER UNE PHOTO ----------------------- */
+
+#add-picture {
+	border: 2px solid black;
+	border-style: dashed;
+	width: 90%;
+	margin: auto;
+	height: 23%;
+	display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ----------------------- PHOTOS AJOUTÉES ----------------------- */
+
+#added-pictures {
+	display: flex;
+	flex-direction: row;
+	width: 96%;
+	height: 10%;
+	margin: auto;
+	margin-top: 2%;
+}
+
+/* ----------------------- PHOTO AJOUTÉE ----------------------- */
+
+.added-picture {
+	border: 2px solid black;
+	border-style: dashed;
+	margin: auto;
+	width: 19%;
+	height: 90%;
+	position: relative;
+}
+
+.added-picture button {
+	position: absolute;
+	padding: 0px;
+	top: -25%;
+	right: -22%;
+}
+
+.added-picture img {
+	width: 60%;
+}
+
+/* -------------------------- AJOUTER UN TITRE -------------------------- */
+
+#add-title {	
+	padding: 3%;
+	margin-top: 3%;
+	border-top: 1px solid black;
+	border-bottom: 1px solid black;
+}
+
+#add-title input {
+	border: none;
+	font-family:'Work Sans', sans-serif;
+	font-size: 2vh;
+}
+
+#add-title input:focus {
+	outline: none;
+}
+
+/* -------------------------- AJOUTER UN LIEU -------------------------- */
+
+#add-place {
+	margin-left: 0.8%;
+	font-size: 2vh;
+	border-bottom: 1px solid black;
+}
+
+#add-place a {
+	padding: 3%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	width: 94%;
+	text-decoration: none;
+	color: black;
+}
+
+/* -------------------------- RÉSEAUX SOCIAUX -------------------------- */
+
+#social-networks {
+	padding: 3%;
+}
+
+.social-network {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.social-network p {
+	margin-top: auto;
+	margin-bottom: auto;
+}
+
+.social-network input{
+	position: relative;
+	-webkit-appearance: none;
+	width: 44px;
+	height: 22px;
+	background-color: #c6c6c6;
+	box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+	border-radius: 20px;
+	transition: 0.5s;
+}
+
+.social-network input:checked {
+	background-color: #0F4873;
+}
+
+.social-network input:before {
+	content: '';
+	position: absolute;
+	width: 22px;
+	height: 22px;
+	border-radius: 20px;
+	top: 0px;
+	left: 0px;
+	transition: 0.5s;
+	transform: scale(1.1);
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+	background-color: #f3f3f3;
+
+}
+
+.social-network input:checked:before {
+	left: 22px;
+}
+
+
+/* ------------------------- BOUTON PUBLIER------------------------- */
+
+#published-button {
+	background-color: #0F4873;
+	padding-top: 4%;
+	padding-bottom: 4%;
+	text-align: center;
+	position: fixed;
+	bottom: 10vh;
+	width: 100%;
+	color: white;
+	font-family:'Work Sans', sans-serif;
+	font-weight: 500;
+	font-size: 3vh;
+}
+
+
+/* ------------------------- FENÊTRE PUBLIÉE ------------------------- */
+
+#popup {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	border-radius: 20px;
+	user-select: none;
+	width: 80%;
+	background-color: white;
+	text-align: center;
+	align-items: center;
+	padding: 1% 2%;
+	border: 1px solid black;
+	font-size: 90%;
+	opacity: 0;
+	transition: all 0.3s ease-in-out;
+	pointer-events: none;
+	filter: blur(0px);
+}
+
+#popup h2 {
+	margin: 2%;
+}
+
+#popup p {
+	margin-bottom: 2%;
+}
+
+/* ------------------------- FOOTER ------------------------- */
+
+footer {
+	position: fixed;
+	bottom: 0;
+	background-color: white;
+	-webkit-box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.25);
+	-moz-box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.25);
+	box-shadow: 0 -4px 25px -6px rgba(0, 0, 0, 0.25);
+	text-align: center;
+	height: 10vh;
+	width: 100%;	
+	overflow: hidden;
+}
+
+footer img {
+	width: auto;
+	height: 60%;
+	margin-right: 3%;
+	margin: 3%;
+}
+
+footer a {
+	text-decoration: none;
+}

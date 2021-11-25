@@ -1,0 +1,151 @@
+/* -------------- IMPORT DES POLICES -------------- */
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@500&display=swap');
+
+
+/* -------------- CSS POUR L'ENSEMBLE DES PAGES -------------- */
+
+body {
+	font-family:'Work Sans', sans-serif;
+	margin: 0;
+}
+
+button {
+	font-family:'Work Sans', sans-serif;
+	font-weight: 500;
+	border: none;
+	background: none;
+	cursor: pointer;
+}
+
+/* -------------- BARRE DE NAVIGATION -------------- */
+
+#navbar {
+	-webkit-box-shadow: 0 8px 6px -6px black;
+	-moz-box-shadow: 0 8px 6px -6px black;
+	box-shadow: 0 5px 6px -6px black;
+	width: 100%;
+	height: 7vh;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+
+.navbar-link {
+	font-size: 14px;
+	margin: 0% 3%;
+	width: 25%;
+	text-align: center;
+}
+
+.navbar-link a {
+	text-decoration: none;
+	color: black;
+	font-weight: 600;
+}
+
+.active-page {
+    border-bottom: 2px solid black;
+}
+
+/* ----------------------- CONTENU PRINCIPAL ----------------------- */
+
+#maincontent-container {
+	height: 79vh;
+	text-align: center;
+	align-items: center;
+	position: relative;
+}
+/* ------------------------ LOGO ET TITRE ------------------------ */
+#logo-and-title{
+	text-align: center;
+}
+#logo {
+	margin-top: 5%;
+}
+
+#logo img {
+	height: 18vh;
+	width: auto;
+
+}
+#title {
+	font-size: 32px;
+}
+
+/* ----------------- INFORMATIONS SUR L'UTILISATEUR ----------------- */
+
+/* ----------------- Inputs pour les informations ----------------- */
+
+::placeholder {
+	font-family:'Work Sans', sans-serif;
+}
+
+.box input{
+	border: none;
+	border-bottom: 1px solid black;
+	width: 90%;
+	margin-top: 0.5%;
+}
+
+.box input:focus{
+	outline: none;
+}
+
+#user_inputs {
+	justify-content: center;
+	align-items: center;
+}
+
+.box {
+	border: 2px solid black;
+	border-radius: 30px;
+	font-size: 14px;
+	margin-top: 3%;
+	width: 80%;
+	height: 4.5vh;
+	margin-left: 8%;
+}
+
+/* -------------------- Bouton pour soumettre -------------------- */
+
+#submit-button{
+	margin-top: 2vh;
+	vertical-align: middle;
+	line-height: 200%;
+	width: 40%;
+	margin-left: auto;
+	margin-right: auto;
+  	width: 50%;
+}
+
+.box a {
+	text-decoration: none;
+	color: black;
+}
+
+/* ------------------------- FOOTER ------------------------- */
+
+footer {
+	position: fixed;
+	bottom: 0;
+	background-color: white;
+	-webkit-box-shadow: 0 8px 6px -6px black;
+	-moz-box-shadow: 0 8px 6px -6px black;
+	box-shadow: 0 -5px 6px -6px black;
+	text-align: center;
+	height: 10vh;
+	width: 100%;	
+	overflow: hidden;
+}
+
+footer img {
+	width: auto;
+	height: 70%;
+	margin-right: 3%;
+	margin: 3%;
+}
+
+footer a {
+	text-decoration: none;
+}

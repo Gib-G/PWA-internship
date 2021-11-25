@@ -1,0 +1,33 @@
+<div ng-controller="Iphone11ProX45Controller">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="../../css/iphone-11-pro-x-45.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+	<body>		
+		<div>
+			<!-------------------------- BARRE DE NAVIGATION -------------------------->
+			<div id="navbar">
+				<button onclick="history.back()">—&nbsp;Retour</button>
+
+				<!-------------------------- BARRE DE RECHERCHE -------------------------->
+				<div id="search-bar">
+					<div id="search-input">
+						<i class="material-icons">search</i>
+						<input type="text" placeholder="Rechercher" ng-model="input">												
+					</div>
+				</div>
+			</div>
+			
+			<!-------------------------- C0NTENU PRINCIPAL  -------------------------->
+			<div id="maincontent-container">
+				<!-------------------------- LES DIFFÉRENTS LIEUX  -------------------------->	
+				<div id="results">
+					<button class="result" ng-repeat="x in places | filter:input">
+						<p>{{x}}</p>
+					</button>
+				</div>
+			</div>	
+		</div>
+	</body>
+</div>

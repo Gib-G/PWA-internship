@@ -1,0 +1,12 @@
+QUELQUES RESSOURCES UTILES POUR LES DÉVELOPPEURS BACK
+-----------------------------------------------------
+
+Symfony
+-------
+
+-> Doc officielle Symfony (très bien faîte) : https://symfony.com/doc/current/index.html
+
+API Platform :
+--------------
+
+-> https://api-platform.com/docs/distribution/

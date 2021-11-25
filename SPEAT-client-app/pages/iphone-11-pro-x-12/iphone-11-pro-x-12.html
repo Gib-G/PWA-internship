@@ -1,0 +1,82 @@
+<div ng-controller="Iphone11ProX12Controller">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="../../css/iphone-11-pro-x-5-11-12.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+	<body>		
+		<div>
+			<!-------------------------- BARRE DE NAVIGATION -------------------------->
+			<div id="navbar">
+				<div id="navbar-firstline">				
+				<!-------------------------- BOUTON RETOUR -------------------------->
+				<button onclick="history.back()">—&nbsp;Retour</button>
+				<!-------------------------- BOUTON POUR L'ADRESSE -------------------------->
+				<button id="location">
+					<img class="location-icon" src="../../assets/location.svg">
+					<p>Paris,&nbsp;France</p>
+					<img class="scroll-icon" src="../../assets/scroll-icon.svg">
+				</button>
+				</div>
+
+				<!-------------------------- BARRE DE RECHERCHE -------------------------->
+				<div id="search-bar">
+					<div id="search-input">
+						<i class="material-icons">search</i>
+						<input type="text" placeholder="Rechercher" ng-model="input">												
+					</div>
+				</div>
+
+				<!-------------------------- TITRE -------------------------->
+				<h2>Mon Historique d'achats</h2>
+
+				
+			</div>
+			
+			<!-------------------------- C0NTENU PRINCIPAL  -------------------------->
+			<div id="maincontent-container">
+				<!-------------------------- LES DIFFÉRENTS ACHATS -------------------------->	
+				
+				<a ng-href="{{x.restaurant.page}}" class="restaurant" ng-repeat="x in purchases | filter:input">
+
+					<div ng-style="{'background-color': x.restaurant.color}" class="restaurant-banner">
+						<img class="restaurant-logo" ng-src="{{x.restaurant.logo}}">
+						<img class="model-3d" src="../../assets/model-3d.svg">
+					</div>
+
+					<p>{{x.restaurant.name}}</p>
+					<p class="restaurant-address">{{x.restaurant.address}}</p>
+					<p class="last-order">Vous avez commandé le {{x.date}} : {{x.purchaseContent}}</p>	
+					<p class="last-order">(commande de {{x.price}})</p>				
+				</a>
+				
+			</div>
+
+			<!-------------------------- ÉDITER L'ADRESSE DE LIVRAISON -------------------------->
+			<div id="edit-location">
+
+				<div class="addresses" id="address1">
+					<img class="location-icon" src="../../assets/location.svg">
+					<p>Avenue Jean-Jaures II </br> Paris</p>
+					<img class="scroll-icon" src="../../assets/scroll-icon.svg">
+				</div>
+				<div class="addresses" id="address2">
+					<img class="location-icon" src="../../assets/location.svg">
+					<p>35 rue Monsarrat </br> Bordeaux</p>
+					<img class="scroll-icon" src="../../assets/scroll-icon.svg">
+				</div>
+
+				<a class="edit-location-buttons" id="add-address-button" ng-href="/#/iphone-11-pro-x-4">Ajouter une adresse</a>
+
+			<button class="edit-location-buttons" id="finish-button">Terminer</button>
+
+			</div>
+
+			<!-------------------------- INSERTIONS DES SCRIPTS -------------------------->
+			<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+			<script src="../../js/iphone-11-pro-x-5-11-12.js"></script>
+
+			
+		</div>
+	</body>
+</div>

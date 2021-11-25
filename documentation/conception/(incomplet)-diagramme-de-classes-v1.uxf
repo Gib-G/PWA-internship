@@ -1,0 +1,1150 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>7</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>245</x>
+      <y>224</y>
+      <w>147</w>
+      <h>112</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;enum&gt;&gt;
+Disponibilite
+--
++LIVRAISON:string
++DRIVE:string
++A_EMPORTER:string
++SUR_PLACE:string
++SERVICE_EN_SALLE:string
++NON_DISPONIBLE:string
++DISPONIBLE:string</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>7</x>
+      <y>1001</y>
+      <w>168</w>
+      <h>203</h>
+    </coordinates>
+    <panel_attributes>EnregistrementRestaurant
+--
+*-id:int*
+
+-demandeur:Utilisateur
+
+-nomRestaurant:string
+-descriptionRestaurant:string|null
+-adresseRestaurant:Adresse
+-personnelRestaurant:Utilisateur[ ]
+-siretRestaurant:int
+...autres informations si besoin
+
+-justificatifs:Document[ ]
+
+-date:Date
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>406</x>
+      <y>581</y>
+      <w>112</w>
+      <h>133</h>
+    </coordinates>
+    <panel_attributes>PlageHoraire
+--
+*-id:int*
+
+-jour:Jour
+
+-ouverture:Time
+-fermeture:Time
+
+-restaurant:Restaurant</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>245</x>
+      <y>805</y>
+      <w>154</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>Adresse
+--
+*-id:int*
+
+-nom:string|null
+-numero:string
+-rue:string
+-codePostal:int
+-commune:string
+
+-latitude:float
+-longitude:float</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>245</x>
+      <y>1001</y>
+      <w>154</w>
+      <h>203</h>
+    </coordinates>
+    <panel_attributes>Utilisateur
+--
+*-id:int*
+
+-pseudo:string|null
+-nom:string
+-prenom:string
+-mail:string @unique
+-motDePasse:string
+-adresses:Adresse[ ]
+-telephone:string|null
+
+-roles:Role[ ]
+-galerie:Image[ ]
+-commandes:Commande[ ]
+
+-produitsFavoris:Produit[ ]
+-restaurantsFavoris:Restaurant[ ]</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>770</x>
+      <y>581</y>
+      <w>133</w>
+      <h>133</h>
+    </coordinates>
+    <panel_attributes>Redirection
+--
+*-id:int*
+
+-nom:string|null
+-description:string|null
+-types:TypeRedirection[ ]
+
+-url:string
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>966</x>
+      <y>735</y>
+      <w>133</w>
+      <h>84</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;enum&gt;&gt;
+TypeRestaurant
+--
++PIZZERIA:string
++SNACK:string
++CHINOIS:string
+...etc</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>504</x>
+      <y>1036</y>
+      <w>119</w>
+      <h>91</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;enum&gt;&gt;
+Role
+--
++UTILISATEUR:string
++CLIENT:string
++PERSONNEL:string
++PROPRIETAIRE:string
++ADMIN:string</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>672</x>
+      <y>805</y>
+      <w>189</w>
+      <h>252</h>
+    </coordinates>
+    <panel_attributes>Commande
+--
+*-id:int*
+
+-reference:string|null
+-moyenDePaiement:MoyenPaiement|null
+-type:Disponibilite
+-date:Date
+
+-nom:string
+-prenom:string
+-telephone:string|null
+-mail:string|null
+-adresse:Adresse|null
+
+-restaurant:Restaurant
+-numeroDeTable:string|null
+
+-produits:Produits[ ]
+
+-indicationsRestaurant:string|null
+-indicationsLivreur:string|null</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>966</x>
+      <y>581</y>
+      <w>133</w>
+      <h>133</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;enum&gt;&gt;
+TypeRedirection
+--
++VERS_UBEREATS:string
++VERS_DELIVEROO:string
++AUTRE:string
+...etc</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>406</x>
+      <y>399</y>
+      <w>112</w>
+      <h>112</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;enum&gt;&gt;
+Jour
+--
++LUNDI:string
++MARDI:string
++MERCREDI:string
++JEUDI:string
++VENDREDI:string
++SAMEDI:string
++DIMANCHE:string</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>644</x>
+      <y>399</y>
+      <w>119</w>
+      <h>133</h>
+    </coordinates>
+    <panel_attributes>Categorie
+--
+*-id:int*
+
+-nom:string|null
+-description:string|null
+
+-categories:Categorie[ ]
+-produits:Produits[ ]
+-ingredients:Ingredient[ ]</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>966</x>
+      <y>903</y>
+      <w>133</w>
+      <h>77</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;enum&gt;&gt;
+MoyenDePaiement
+--
++LIQUIDE:string
++CARTE:string
++PAYPAL:string
+...etc</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>7</x>
+      <y>301</y>
+      <w>168</w>
+      <h>84</h>
+    </coordinates>
+    <panel_attributes>Image
+--
+*-id:int*
+
+-nom:string|null
+-description:string|null
+-types:TypeImage[ ]</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>966</x>
+      <y>217</y>
+      <w>133</w>
+      <h>91</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;enum&gt;&gt;
+TypeProduit
+--
++PIZZA:string
++SANDWICH:string
++KEBAB:string
+...etc</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>7</x>
+      <y>42</y>
+      <w>168</w>
+      <h>91</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;enum&gt;&gt;
+TypeImage
+--
++PHOTO_CLIENT:string
++PHOTO_PERSONNEL:string
++LOGO:string
++SPEAT:string
+...etc</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>672</x>
+      <y>1085</y>
+      <w>189</w>
+      <h>119</h>
+    </coordinates>
+    <panel_attributes>Note
+--
+*-id:int*
+
+-utilisateur:Utilisateur|null
+-produit:Produit
+
+-noteGout:int
+-notePresentation:int
+-noteQuantite:int</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>245</x>
+      <y>399</y>
+      <w>154</w>
+      <h>315</h>
+    </coordinates>
+    <panel_attributes>Restaurant
+--
+*-id:int*
+
+-nom:string
+-description:string|null
+-adresse:Adresse
+-personnel:Utilisateur[ ]
+-siret:int
+...autres informations si 
+besoin
+
+-types:TypeRestaurant[ ]
+-disponibilites:Disponibilite[ ]
+-horaires:PlageHoraire[ ]
+-menu:Categorie[ ]
+-illustrations:Image[ ]
+-redirections:Redirection[ ]
+-commandes:Commande[ ]
+-publicites:Publicite[ ]</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>7</x>
+      <y>812</y>
+      <w>168</w>
+      <h>63</h>
+    </coordinates>
+    <panel_attributes>Document
+--
+*-id:int*
+
+-dossier:EnregistrementRestaurant
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>525</x>
+      <y>693</y>
+      <w>112</w>
+      <h>21</h>
+    </coordinates>
+    <panel_attributes>Publicite
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>525</x>
+      <y>399</y>
+      <w>112</w>
+      <h>112</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;enum&gt;&gt;
+TypePublicite
+--
++VIDEO:string
++IMAGE:string
+...etc</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>616</x>
+      <y>112</y>
+      <w>105</w>
+      <h>105</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;enum&gt;&gt;
+TypePrix
+--
++UBEREATS:string
++DELIVEROO:string
++REDUCTION:string
++PRIORITAIRE:string
++PAR_DEFAUT:string
+...etc</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>245</x>
+      <y>42</y>
+      <w>147</w>
+      <h>105</h>
+    </coordinates>
+    <panel_attributes>@Mapped super-class
+/Consommable/
+--
+-nom:string
+-description:string|null
+
+-disponibilites:Disponibilite[ ]
+
+-illustrations:Image[ ]
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>434</x>
+      <y>133</y>
+      <w>105</w>
+      <h>63</h>
+    </coordinates>
+    <panel_attributes>@Mapped super-class
+/Prix/
+--
+-types:TypePrix[ ]
+-valeur:float
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>168</x>
+      <y>350</y>
+      <w>91</w>
+      <h>231</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+m1=0..n
+m2=0..n</panel_attributes>
+    <additional_attributes>110.0;300.0;60.0;300.0;60.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>168</x>
+      <y>91</y>
+      <w>91</w>
+      <h>287</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+m1=0..n
+m2=0..n</panel_attributes>
+    <additional_attributes>110.0;10.0;60.0;10.0;60.0;380.0;10.0;380.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>168</x>
+      <y>350</y>
+      <w>91</w>
+      <h>721</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+m1=0..n
+m2=0..n</panel_attributes>
+    <additional_attributes>110.0;1000.0;60.0;1000.0;60.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>476</x>
+      <y>84</y>
+      <w>21</w>
+      <h>63</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;70.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>476</x>
+      <y>189</y>
+      <w>21</w>
+      <h>63</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;70.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>532</x>
+      <y>56</y>
+      <w>217</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+m2=1..n</panel_attributes>
+    <additional_attributes>290.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>532</x>
+      <y>259</y>
+      <w>217</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+m2=1..n</panel_attributes>
+    <additional_attributes>290.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>371</x>
+      <y>0</y>
+      <w>392</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;60.0;10.0;10.0;540.0;10.0;540.0;40.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>371</x>
+      <y>140</y>
+      <w>392</w>
+      <h>210</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;70.0;60.0;70.0;60.0;280.0;540.0;280.0;540.0;240.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>315</x>
+      <y>994</y>
+      <w>21</w>
+      <h>21</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>266</x>
+      <y>707</y>
+      <w>35</w>
+      <h>112</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+m1=0..n</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;140.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>301</x>
+      <y>707</y>
+      <w>490</w>
+      <h>112</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m2=0..n
+recevoir &gt;</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;120.0;660.0;120.0;660.0;140.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>392</x>
+      <y>854</y>
+      <w>294</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+m1=0..n</panel_attributes>
+    <additional_attributes>400.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>735</x>
+      <y>217</y>
+      <w>133</w>
+      <h>91</h>
+    </coordinates>
+    <panel_attributes>Ingredient
+--
+*-id:int*
+
+-produit:Produit
+
+-prixUnitaire:PrixIngredient[ ]
+-quantiteMax:int</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>735</x>
+      <y>28</y>
+      <w>133</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>Produit
+--
+*-id:int*
+
+-types:TypeProduit[ ]
+
+-prixUnitaire:PrixProduit[ ]
+-composition:string|null
+-options:Ingredient[ ]
+
+-notes:Note[ ]
+-redirections:Redirection[ ]</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>532</x>
+      <y>161</y>
+      <w>98</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+m1=0..n
+m2=0..n</panel_attributes>
+    <additional_attributes>10.0;10.0;120.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>378</x>
+      <y>707</y>
+      <w>112</w>
+      <h>42</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+m2=0..n</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;40.0;120.0;40.0;120.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>378</x>
+      <y>707</y>
+      <w>231</w>
+      <h>42</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+m2=0..n</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;40.0;290.0;40.0;290.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>378</x>
+      <y>525</y>
+      <w>357</w>
+      <h>224</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+m2=0..n</panel_attributes>
+    <additional_attributes>10.0;270.0;10.0;300.0;470.0;300.0;470.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>378</x>
+      <y>707</y>
+      <w>483</w>
+      <h>42</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+m2=0..n</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;40.0;650.0;40.0;650.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>336</x>
+      <y>707</y>
+      <w>644</w>
+      <h>77</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+m1=0..n
+m2=0..n</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;80.0;900.0;80.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>896</x>
+      <y>644</y>
+      <w>84</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+m1=0..n
+m2=0..n</panel_attributes>
+    <additional_attributes>10.0;10.0;100.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>392</x>
+      <y>1141</y>
+      <w>294</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m2=0..n
+donner &gt;</panel_attributes>
+    <additional_attributes>10.0;20.0;400.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>392</x>
+      <y>1078</y>
+      <w>126</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+m1=0..n
+m2=1..n</panel_attributes>
+    <additional_attributes>10.0;10.0;160.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>266</x>
+      <y>938</y>
+      <w>35</w>
+      <h>77</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+m1=0..n
+m2=0..n</panel_attributes>
+    <additional_attributes>10.0;90.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>259</x>
+      <y>140</y>
+      <w>35</w>
+      <h>98</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+m1=0..n
+m2=0..n</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;120.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>259</x>
+      <y>329</y>
+      <w>35</w>
+      <h>84</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+m1=0..n
+m2=0..n</panel_attributes>
+    <additional_attributes>10.0;100.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>854</x>
+      <y>938</y>
+      <w>126</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+m1=0..n</panel_attributes>
+    <additional_attributes>10.0;10.0;160.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>84</x>
+      <y>126</y>
+      <w>35</w>
+      <h>189</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+m1=0..n
+m2=0..n</panel_attributes>
+    <additional_attributes>10.0;250.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>84</x>
+      <y>868</y>
+      <w>35</w>
+      <h>147</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+m2=0..n</panel_attributes>
+    <additional_attributes>10.0;190.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>168</x>
+      <y>1127</y>
+      <w>91</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+m1=0..n</panel_attributes>
+    <additional_attributes>10.0;10.0;110.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>434</x>
+      <y>238</y>
+      <w>105</w>
+      <h>63</h>
+    </coordinates>
+    <panel_attributes>PrixIngredient
+--
+*-id:int*
+
+-ingredient:Ingredient</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>434</x>
+      <y>28</y>
+      <w>105</w>
+      <h>63</h>
+    </coordinates>
+    <panel_attributes>PrixProduit
+--
+*-id:int*
+
+-produit:Produit</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>791</x>
+      <y>161</y>
+      <w>35</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+m2=0..n</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;80.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>7</x>
+      <y>546</y>
+      <w>168</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>@Mapped super-class
+/Fichier/
+--
+-chemin:string
+
+-date:Date
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>84</x>
+      <y>378</y>
+      <w>21</w>
+      <h>182</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;240.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>21</x>
+      <y>609</y>
+      <w>21</w>
+      <h>217</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;290.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>861</x>
+      <y>91</y>
+      <w>203</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+m1=0..n
+m2=0..n</panel_attributes>
+    <additional_attributes>10.0;10.0;250.0;10.0;250.0;180.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>455</x>
+      <y>504</y>
+      <w>35</w>
+      <h>91</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+m1=0..n</panel_attributes>
+    <additional_attributes>10.0;110.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>574</x>
+      <y>504</y>
+      <w>35</w>
+      <h>203</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+m1=0..n
+m2=0..n</panel_attributes>
+    <additional_attributes>10.0;270.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>70</x>
+      <y>665</y>
+      <w>105</w>
+      <h>119</h>
+    </coordinates>
+    <panel_attributes>Publicite
+--
+*-id:int*
+
+-restaurant:Restaurant
+
+-types:TypePublicite[ ]
+-valeur:float
+-NombreDeVues:int</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>119</x>
+      <y>609</y>
+      <w>21</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;80.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>756</x>
+      <y>420</y>
+      <w>105</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+m1=0..n
+m2=0..n</panel_attributes>
+    <additional_attributes>10.0;10.0;130.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>756</x>
+      <y>490</y>
+      <w>105</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+m1=0..n
+m2=0..n</panel_attributes>
+    <additional_attributes>10.0;10.0;130.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>847</x>
+      <y>490</y>
+      <w>56</w>
+      <h>21</h>
+    </coordinates>
+    <panel_attributes>Produit</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>847</x>
+      <y>420</y>
+      <w>56</w>
+      <h>21</h>
+    </coordinates>
+    <panel_attributes>Ingrédient</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>854</x>
+      <y>854</y>
+      <w>126</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+m1=0..n
+m2=0..n</panel_attributes>
+    <additional_attributes>10.0;10.0;160.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>966</x>
+      <y>854</y>
+      <w>70</w>
+      <h>21</h>
+    </coordinates>
+    <panel_attributes>Disponibilite</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>854</x>
+      <y>1008</y>
+      <w>126</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+m1=0..n
+m2=0..n</panel_attributes>
+    <additional_attributes>10.0;10.0;160.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>966</x>
+      <y>1008</y>
+      <w>70</w>
+      <h>21</h>
+    </coordinates>
+    <panel_attributes>Produit</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>854</x>
+      <y>1022</y>
+      <w>161</w>
+      <h>154</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=0..n
+évaluer &gt;</panel_attributes>
+    <additional_attributes>10.0;190.0;210.0;190.0;210.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>658</x>
+      <y>357</y>
+      <w>112</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+m1=0..n
+m2=0..n</panel_attributes>
+    <additional_attributes>10.0;60.0;10.0;10.0;120.0;10.0;120.0;60.0</additional_attributes>
+  </element>
+</diagram>

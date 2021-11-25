@@ -1,0 +1,108 @@
+/* -------------- IMPORT DES POLICES -------------- */
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@500&display=swap');
+
+
+
+/* -------------- CSS POUR L'ENSEMBLE DES PAGES -------------- */
+
+body {
+	font-family:'Work Sans', sans-serif;
+	margin: 0;
+	text-align: left;
+}
+
+p {
+	margin: 0px;
+}
+
+button {
+	border: none;
+	background: none;
+	cursor: pointer;
+}
+
+/* -------------- BARRE DE NAVIGATION -------------- */
+
+#navbar {
+	-webkit-box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.25);
+	-moz-box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.25);
+	box-shadow: 0 4px 25px -6px rgba(0, 0, 0, 0.25);
+	width: 100%;
+	height: 9vh;
+	display: flex;
+	flex-direction: column;
+}
+
+#navbar a {
+	text-decoration: none;
+	color: black;
+	font-weight: 600;
+	text-align: center;
+	font-size: 14px;
+	float: left;	
+  	padding: 2.5vh 2vh;
+}
+
+#navbar button {
+	text-align: left;
+	font-weight: 600;
+	font-size: 14px;
+  	padding: 2% 3%;
+	font-family:'Work Sans', sans-serif;
+	width: 50%;
+	padding-bottom: 0;
+}
+
+/* ----------------------- BARRE DE RECHERCHE ----------------------- */
+
+#search-bar {
+	margin: auto;
+	width: 90%;
+	border: 1px solid black;
+	border-radius: 30px;	
+	padding: 1%;
+}
+
+#search-input {
+	display: flex;
+	flex-direction: row;
+}
+
+#search-input input {
+	width: 97%;
+	margin-left: 2%;
+	border: none;
+	background: none;
+}
+
+#search-input input:focus{
+    outline: none;
+}
+
+/* ----------------------- CONTENU PRINCIPAL ----------------------- */
+
+#maincontent-container {
+	height: 89vh;
+}
+
+/* ----------------------- LES DIFFÉRENTS LIEUX ----------------------- */
+
+#results {
+	display: flex;
+	flex-direction: column;
+}
+
+.result {
+	height: 8vh;
+	display: flex;
+	margin-left: 1.5%;
+}
+
+.result p {
+	margin-top: auto;
+	margin-bottom: auto;
+}
+
+.result:hover {
+	background-color: #eeeeee;
+}

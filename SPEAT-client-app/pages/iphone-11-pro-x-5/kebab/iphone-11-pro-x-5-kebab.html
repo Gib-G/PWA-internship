@@ -1,0 +1,103 @@
+<div ng-controller="Iphone11ProX5KebabController">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="../../css/iphone-11-pro-x-5-11-12.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+	<body>		
+		<div>
+			<!-------------------------- BARRE DE NAVIGATION -------------------------->
+			<div id="navbar">
+				<div id="navbar-firstline">				
+				<!-------------------------- BOUTON RETOUR -------------------------->
+				<button onclick="history.back()">—&nbsp;Retour</button>
+				<!-------------------------- BOUTON POUR L'ADRESSE -------------------------->
+				<button id="location">
+					<img class="location-icon" src="../../assets/location.svg">
+					<p>Paris,&nbsp;France</p>
+					<img class="scroll-icon" src="../../assets/scroll-icon.svg">
+				</button>
+				</div>
+
+				<!-------------------------- BARRE DE RECHERCHE -------------------------->
+				<div id="search-bar">
+					<div id="search-input">
+						<i class="material-icons">search</i>
+						<input type="text" placeholder="Rechercher" ng-model="input">	
+						<a href="#/iphone-11-pro-x-5/filters"><img src="../../assets/filters-icon.svg"></a>													
+					</div>
+				</div>
+
+				<!-------------------------- CATÉGORIES -------------------------->
+				<div id="categories">
+					<a ng-href="#/iphone-11-pro-x-5" style="padding-top: 0px;" id="all-category"><p>Tout</p></a>
+					<a ng-href="#/iphone-11-pro-x-5/burger">
+						<img src="../../assets/burger.svg">
+						<p>Burger</p>
+					</a>
+					<a ng-href="#/iphone-11-pro-x-5/pizza">
+						<img src="../../assets/pizza.svg">
+						<p>Pizza</p>
+					</a>										
+					<a class="current-category">
+						<img src="../../assets/kebab.svg">
+						<p>Kebab</p>
+					</a>
+					<a ng-href="#/iphone-11-pro-x-5/pasta">
+						<img src="../../assets/pasta.svg">
+						<p>Pâtes</p>
+					</a>					
+					<a ng-href="#/iphone-11-pro-x-5/sushi">
+						<img src="../../assets/sushi.svg">
+						<p>Sushi</p>
+					</a>
+					<a ng-href="#/iphone-11-pro-x-5/vegan">
+						<img src="../../assets/vegan.svg">
+						<p>Vegan</p>
+					</a>
+				</div>
+			</div>
+			
+			<!-------------------------- C0NTENU PRINCIPAL  -------------------------->
+			<div id="maincontent-container">
+				<!-------------------------- LES DIFFÉRENTS RESTAURANTS  -------------------------->	
+				
+				<a ng-href="{{x.page}}" class="restaurant" ng-repeat="x in places | filter:input">
+
+					<div ng-style="{'background-color': x.color}" class="restaurant-banner">
+						<img class="restaurant-logo" ng-src="{{x.logo}}">
+						<img class="model-3d" src="../../assets/model-3d.svg">
+					</div>
+
+					<p>{{x.name}}</p>
+					<p class="restaurant-address">{{x.address}}</p>						
+				</a>
+				
+			</div>
+
+			<!-------------------------- ÉDITER L'ADRESSE DE LIVRAISON -------------------------->
+			<div id="edit-location">
+
+				<div class="addresses" id="address1">
+					<img class="location-icon" src="../../assets/location.svg">
+					<p>Avenue Jean-Jaures II </br> Paris</p>
+					<img class="scroll-icon" src="../../assets/scroll-icon.svg">
+				</div>
+				<div class="addresses" id="address2">
+					<img class="location-icon" src="../../assets/location.svg">
+					<p>35 rue Monsarrat </br> Bordeaux</p>
+					<img class="scroll-icon" src="../../assets/scroll-icon.svg">
+				</div>
+
+				<a class="edit-location-buttons" id="add-address-button" ng-href="/#/iphone-11-pro-x-4">Ajouter une adresse</a>
+
+			<button class="edit-location-buttons" id="finish-button">Terminer</button>
+
+			</div>
+
+			<!-------------------------- INSERTIONS DES SCRIPTS -------------------------->
+			<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+			<script src="../../js/iphone-11-pro-x-5-11-12.js"></script>			
+		</div>
+	</body>
+</div>

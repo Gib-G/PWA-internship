@@ -1,0 +1,301 @@
+/* -------------- IMPORT DES POLICES -------------- */
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@500&display=swap');
+
+
+
+/* -------------- CSS POUR L'ENSEMBLE DES PAGES -------------- */
+body {
+	font-family:'Work Sans', sans-serif;
+	margin: 0;
+	text-align: left;
+}
+
+p {
+	margin: 0px;
+}
+
+
+
+/* -------------- BARRE DE NAVIGATION -------------- */
+
+#navbar {
+	-webkit-box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.25);
+	-moz-box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.25);
+	box-shadow: 0 4px 25px -6px rgba(0, 0, 0, 0.25);
+	width: 100%;
+	height: 8vh;
+	align-items: center;
+}
+
+#navbar a {
+	text-decoration: none;
+	color: black;
+	font-weight: 600;
+	text-align: center;
+	font-size: 14px;
+	float: left;	
+  	padding: 2.5vh 2vh;
+}
+
+#navbar button {
+	font-weight: 600;
+	text-align: center;
+	font-size: 14px;
+	float: left;	
+  	padding: 2.5vh 1vh;
+	font-family:'Work Sans', sans-serif;
+	background: none;
+	border: none;
+	cursor: pointer;
+}
+
+/* ----------------------- CONTENU PRINCIPAL ----------------------- */
+
+#maincontent-container {
+	height: 79vh;
+	align-items: center;
+	position: relative;
+}
+
+/* --------------------------- BANNIÈRE --------------------------- */
+
+#banner {
+	position: relative;
+}
+
+/* ----------------------- LOGO DU RESTAURANT ----------------------- */
+
+#restaurant-logo{
+	text-align: center;
+	margin: 3%;
+}
+
+#restaurant-logo img {
+	height: 20%;
+}
+
+/* ----------------------- IMAGE DU MENU ----------------------- */
+
+#menu-image {
+	border-radius: 50%;
+	border: 5px solid #004413;
+	background-color: white;
+	width: 40%;
+	text-align: center;
+	margin: auto;
+	display: block;
+	position: absolute;
+	bottom: -30%;
+	left: 0px;
+	right: 0px;
+}
+
+#menu-image img {
+	width: 100%;
+}
+
+/* ----------------- LES DIFFÉRENTES BOXES ----------------- */
+
+#boxes {
+	position: relative;
+	top: 6%;
+	padding-bottom: 14vh;
+}
+
+.box {
+	border-bottom: 2px solid black;
+	font-size: 14px;
+	width: 100%;
+	height: auto;
+	padding-top: 3%;
+	padding-bottom: 3%;
+}
+
+.box h2 {
+	margin: 0px;
+	margin-left: 3%;
+	margin-bottom: 3%;
+	font-size: 2.5vh;
+}
+
+/* ----------------- LA BOXE : INFORMATIONS SUR LE MENU ----------------- */
+
+#informations {
+	padding: 0px;
+	margin: 0px;
+	padding-bottom: 4%;
+	margin-left: 3%;
+}
+
+h1 {
+	font-size: 3.5vh;
+	margin: 0px;
+	margin-bottom: 1%;
+}
+
+/* ----------------- LA BOXE : NOTE DU MENU ----------------- */
+
+.rating {
+	display: flex;
+	flex-direction: row;
+	margin-left: 3%;
+}
+
+.rating-criteria p {
+	margin-bottom: 1.1vh;
+	margin-right: 2vh;
+}
+
+.rating-circle img {
+	margin-bottom: 0.3vh;
+	margin-right: 0.5vh;
+}
+
+#rating-button {
+	margin-top: 1%;
+	text-align: center;
+}
+
+#rating-button button{
+	border: none;
+	background: none;
+	font-family:'Work Sans', sans-serif;
+	text-align: center;
+	margin: auto;
+	border-bottom: 1px solid black;
+	padding: 0px;
+	cursor: pointer;
+}
+
+/* --------------------------- FENÊTRE DE NOTATION --------------------------- */
+
+#popup {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	border-radius: 20px;
+	width: 80%;
+	background-color: white;
+	padding: 5%;
+	border: 1px solid black;
+	opacity: 0;
+	transition: all 0.3s ease-in-out;
+	pointer-events: none;
+	filter: blur(0px);
+}
+
+#popup h2 {
+	text-align: center;
+}
+
+#popup-menu-image {
+	border-radius: 50%;
+	border: 5px solid #004413;
+	background-color: white;
+	width: 40%;
+	text-align: center;
+	display: block;
+	margin: auto;
+}
+
+#popup-menu-image img {
+	width: 100%;
+}
+
+#buttons-div{
+	text-align: center;
+	margin-top: 3%;
+}
+
+#buttons-div button {
+	font-family:'Work Sans', sans-serif;
+	border: none;
+	background: none;
+	cursor: pointer;
+}
+
+#yes-button {
+	color: #0F4873;
+	margin-left: 15%;
+	margin-right: 5%;
+}
+
+#no-button {
+	color: #D62300;
+}
+/* ----------------- LA BOXE : COMPOSITION DU MENU ----------------- */
+
+#ingredients-box {
+	border-bottom: none;
+}
+
+#ingredients {
+	margin-left: 3%;
+}
+
+#ingredients h3 {
+	font-weight: 500;
+	text-decoration: underline;
+	margin-bottom: 3%;
+}
+
+#ingredients ul {
+	margin-top: 1%;
+}
+
+#ingredients p {
+	margin-left: 2%;
+}
+
+/* ------------------------- FOOTER ------------------------- */
+
+#basket-link {
+	border-radius: 50%;
+	background-color: white;
+	width: 23%;
+	height: 10%;
+	text-align: center;
+	margin: auto;
+	display: block;
+	position: fixed;
+	bottom: 8%;
+	left: 0px;
+	right: 0px;
+	z-index: 1;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	-webkit-box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.25);
+	-moz-box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.25);
+	box-shadow: 0 -4px 25px -6px rgba(0, 0, 0, 0.25);
+}
+
+#basket-link img {
+	margin: auto;
+}
+
+footer {
+	position: fixed;
+	bottom: 0;
+	background-color: white;
+	-webkit-box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.25);
+	-moz-box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.25);
+	box-shadow: 0 -4px 25px -6px rgba(0, 0, 0, 0.25);
+	text-align: center;
+	height: 10vh;
+	width: 100%;	
+	overflow: hidden;
+}
+
+footer img {
+	width: auto;
+	border: auto;
+	height: 60%;
+	margin-right: 3%;
+	margin: 3%;
+}
+
+footer a {
+	text-decoration: none;
+}

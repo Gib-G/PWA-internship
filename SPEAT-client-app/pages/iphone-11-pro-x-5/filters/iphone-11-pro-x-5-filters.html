@@ -1,0 +1,63 @@
+<div ng-controller="Iphone11ProX5FiltersController">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="../../css/iphone-11-pro-x-5-filters.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+	<body>		
+		<div style="padding: 3%;">					
+			<!-------------------------- BOUTON RETOUR -------------------------->
+			<button id="back-button" onclick="history.back()">—&nbsp;Retour</button>
+			
+			<h2>Filtres</h2>
+			
+			<!-------------------------- LES SECTIONS -------------------------->
+			
+			<!-------------------------- TYPES DE SERVICES -------------------------->
+			<h3 style="margin-bottom: 4%;">Types de services</h3>
+			<div class="section" id="types-services">
+				<button id="delivery-button">
+					<img src="../../../assets/delivery-icon.png">
+					<p>Livraison</p>
+				</button>
+				<button id="takeaway-button">
+					<img src="../../../assets/takeaway-icon.png">
+					<p>À emporter</p>
+				</button>
+			</div>
+
+			<!-------------------------- TRIER PAR -------------------------->
+			<h3>Trier par</h3>
+			<div class="section" id="sort-div">
+				<input type="radio" name="sort-by">
+				<label for="html">Les plus populaires</label><br>
+
+				<input type="radio" name="sort-by">
+				<label for="css">Les plus proches</label><br>
+
+				<input type="radio" name="sort-by">
+				<label for="javascript">Les mieux notés</label><br>
+
+				<input type="radio" name="sort-by">
+				<label for="css">Temps de livraison</label><br>
+
+				<input type="radio" name="sort-by">
+				<label for="javascript">Prix</label>
+			</div>
+			
+			<!-------------------------- PRIX -------------------------->
+			<h3>Prix</h3>
+			<div class="section" id="price-scale">
+				<input type="range" min="0" max="50" step="5" value="25">
+				<div id="price-overview">
+					<p>0€</p>
+					<p>50€</p>
+				</div>
+			</div>
+		</div>
+
+		<!-------------------------- INSERTIONS DES SCRIPTS -------------------------->
+		<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+		<script src="../../js/iphone-11-pro-x-5-filters.js"></script>	
+	</body>
+</div>

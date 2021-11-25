@@ -1,0 +1,177 @@
+<div ng-controller="Iphone11ProX10Controller">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="../../css/iphone-11-pro-x-10.css">
+	<body>
+		<div id="blur">
+			<!-------------------------- BARRE DE NAVIGATION -------------------------->
+			<div id="navbar">
+				<button onclick="history.back()">—  Retour</button>
+			</div>			
+			
+			<!-- ------------------------ C0NTENU PRINCIPAL  ------------------------ -->
+			<div id="maincontent-container">
+
+				<!-------------------------- BANNIÈRE -------------------------->
+				<!-------------------------- LOGO DU RESTAURANT -------------------------->
+				<div id="banner">
+					<div id="restaurant-logo" style="background-color: #004413;">
+						<img style="margin: 5% auto;" src="../../assets/mcdonalds-logo.svg"/>
+					</div>
+
+					<!-------------------------- IMAGE DU MENU -------------------------->
+					<div id="menu-image">
+						<img src="../../assets/menu-image.svg">						
+					</div>
+				</div>
+
+				<!-------------------------- LES DIFFÉRENTES BOXES -------------------------->				
+				<div id="boxes">
+
+					<!-------------------------- LA BOXE : INFORMATIONS SUR LE MENU  -------------------------->
+					<div class="box">
+						<div id="informations">
+							<h1>Menu Big Mac</h1>
+							<p>7,90 €</p>
+						</div>
+						
+					</div>
+
+					<!-------------------------- LA BOXE : NOTE DU MENU  -------------------------->
+					<div class="box">
+						<h2>Note du menu</h2>
+						<div class="rating">							
+							<div class="rating-criteria">								
+								<p>Présentation :</p>
+								<p>Quantité :</p>
+								<p>Goût :</p>
+							</div>
+							<div class="rating-circles">							
+								<div class="rating-circle">
+									<img src="../../assets/rating-circle.svg">
+									<img src="../../assets/rating-circle.svg">
+									<img src="../../assets/rating-circle.svg">
+								</div>
+								<div class="rating-circle">
+									<img src="../../assets/rating-circle.svg">
+									<img src="../../assets/rating-circle.svg">
+									<img src="../../assets/rating-circle.svg">
+								</div>
+								<div class="rating-circle">
+									<img src="../../assets/rating-circle.svg">
+									<img src="../../assets/rating-circle.svg">
+									<img src="../../assets/rating-circle.svg">
+								</div>
+							</div>
+						</div>
+						<div id="rating-button">
+							<button>Noter</button>
+						</div>						
+					</div>
+
+					<!-------------------------- LA BOXE : COMPOSITION DU MENU  -------------------------->
+					<div id="ingredients-box" class="box">
+						<h2>Composition</h2>
+
+						<div id="ingredients">
+						
+						<h3>Burger :</h3>
+						<ul>
+							<li>Pain à burger</li>
+							<li>2 Steaks</li>
+							<li>Cheddar fondu</li>
+							<li>Oignons</li>
+							<li>Cornichons</li>
+							<li>Salade</li>
+							<li>Sauce Big Mac</li>
+						</ul>
+
+						<h3>Accompagnement :</h3>
+						<p>Au choix entre :</p>
+						<ul>
+							<li>Frites</li>
+							<li>Potatoes</li>
+							<li>P'tite Salade</li>
+						</ul>
+						
+						<h3>Boissons :</h3>
+						<p>Au choix entre :</p>
+						<ul>
+							<li>Bouteille d'Evian 33cl</li>
+							<li>Bouteille de Badoit 33cl</li>
+							<li>Minute Maid orange 30cl</li>
+							<li>Soda 40cl</li>
+						</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-------------------------- FENÊTRE DE NOTATION -------------------------->
+		
+		<div id="popup">
+			<div id="popup-menu-image">
+				<img src="../../assets/menu-image.svg">				
+			</div>
+			
+			<h2>Menu Big Mac</h2>
+
+			<div class="rating">							
+				<div class="rating-criteria">								
+					<p>Présentation :</p>
+					<p>Quantité :</p>
+					<p>Goût :</p>
+				</div>
+				<div class="rating-circles">							
+					<div class="rating-circle">
+						<img src="../../assets/rating-circle.svg">
+						<img src="../../assets/rating-circle.svg">
+						<img src="../../assets/rating-circle.svg">
+					</div>
+					<div class="rating-circle">
+						<img src="../../assets/rating-circle.svg">
+						<img src="../../assets/rating-circle.svg">
+						<img src="../../assets/rating-circle.svg">
+					</div>
+					<div class="rating-circle">
+						<img src="../../assets/rating-circle.svg">
+						<img src="../../assets/rating-circle.svg">
+						<img src="../../assets/rating-circle.svg">
+					</div>
+				</div>
+			</div>
+
+			<div id="buttons-div">
+				<button id="no-button">Annuler</button>
+				<button id="yes-button">Valider</button>						
+			</div>
+		</div>
+
+		<!-------------------------- FOOTER -------------------------->
+		<div id="basket-link">
+			<a ng-href="/#/iphone-11-pro-x-42">
+				<img src="../../assets/footer-img5.svg">
+			</a>					
+		</div>	
+
+		<footer>
+			<a ng-href="/#/home">
+				<img src="../../assets/footer-img1.svg"/>
+			</a>
+			<a ng-href="">					
+				<img src="../../assets/footer-img2.svg"/>				
+			</a>
+			<a ng-href="">
+				<img src="../../assets/footer-img3.svg"/>
+			</a>
+			<a ng-href="">
+				<img src="../../assets/footer-img4.svg"/>
+			</a>
+		</footer>
+
+		<!-------------------------- FICHIERS JAVASCRIPTS -------------------------->		
+		<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+		<script src="../../js/iphone-11-pro-x-10.js"></script>
+	</body>
+</div>

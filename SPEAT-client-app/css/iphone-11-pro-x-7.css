@@ -1,0 +1,253 @@
+/* -------------- IMPORT DES POLICES -------------- */
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@500&display=swap');
+
+
+
+
+/* -------------- CSS POUR L'ENSEMBLE DES PAGES -------------- */
+body {
+	font-family:'Work Sans', sans-serif;
+	margin: 0;
+	text-align: left;
+	font-size: 14px;
+}
+
+button {
+	font-family:'Work Sans', sans-serif;
+	background: none;
+	border: none;
+	cursor: pointer;
+}
+
+ul {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+	color: black;
+}
+
+a:hover {
+	color: black;
+}
+
+/* -------------- BARRE DE NAVIGATION -------------- */
+
+#navbar {
+	-webkit-box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.25);
+	-moz-box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.25);
+	box-shadow: 0 4px 25px -6px rgba(0, 0, 0, 0.25);
+	width: 100%;
+	height: 8vh;
+	align-items: center;
+}
+
+#navbar button {
+	font-weight: 600;
+	text-align: center;
+	font-size: 14px;
+	float: left;	
+  	padding: 2.5vh 1vh;	
+}
+
+/* ----------------------- CONTENU PRINCIPAL ----------------------- */
+
+#maincontent-container {
+	height: 70vh;
+}
+
+/* ----------------- PHOTO DU RESTAURANT ----------------- */
+
+#profile-picture {
+	text-align: center;
+	margin: 3%;
+}
+
+#profile-picture img {
+	height: 20%;
+}
+
+/* ----------------- INFORMATIONS SUR LE RESTAURANT ----------------- */
+
+h2 {
+	font-family:'Work Sans', sans-serif;
+	font-size: 16px;
+	margin: 0;
+}
+
+#restaurant-infos p {
+	margin: 0;
+}
+
+#restaurant-infos {
+	padding-left: 3%;
+	padding-right: 1%;
+	margin-bottom: 5%;
+}
+
+#first-line {
+	display: flex;
+	text-align: center;
+}
+
+#first-line button:first-of-type {
+	margin-left: auto;
+}
+
+#first-line button img {
+	margin-bottom: 20%;
+}
+
+/* --------------------------- LES DIFFÉRENTES BOXES --------------------------- */
+
+.box {
+	border-top: 1.5px solid black;	
+	height: auto;
+	width: 100%;
+	padding: 1% 4%;
+}
+
+.box button {
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+}
+
+.box button img {
+	margin-right: 2%;
+	margin-top: auto;
+	margin-bottom: auto;	
+}
+
+.box button p {
+	margin-top: auto;
+	margin-bottom: auto;	
+}
+
+
+/* --------------------------- LES HORAIRES --------------------------- */
+
+#open-closed{
+	margin-left: auto;
+}
+
+.open {
+	color: #72FF6F;
+}
+
+.closed{
+	color: #E03131;
+}
+
+#hours {
+	transition: all 0.4s ease;
+	transform: translateY(8px);
+	display: none;
+}
+
+.box button:focus + #hours {
+	display: block;
+}
+
+#hours ul {
+	padding-left: 5%;
+}
+
+/* ------------------------------ LE MENU ------------------------------- */
+
+#menu-box {
+	border-bottom: 1.5px solid black;
+	display: inline-block;
+	margin-bottom: 10vh;
+}
+
+#menu-box p {
+	margin-bottom: 0;
+}
+
+#menu-content h2 {
+	font-size: 30px;
+	font-weight: bold;
+	margin-bottom: 3%;
+}
+
+#menu-navbar {
+	margin: 2% 0%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	width: 100%;
+}
+
+#menu-navbar a {
+	border: 1px solid black;
+	box-sizing: border-box;
+	border-radius: 19px;
+	padding: 1% 1%;
+	width: 32%;
+	white-space: nowrap;
+	text-align: center;
+	cursor: pointer;
+}
+
+#menu-navbar a:first-child {
+	background-color: #FFF3EA;
+	;
+}
+
+#menu-maincontent {
+	margin: 2% 5%;
+}
+
+.category {
+	border: 2px solid black;
+	border-radius: 10px;
+	padding: 2%;
+	width: 93%;
+	height: auto;
+	position: relative;
+	margin-bottom: 5%;
+}
+
+.category h3 {
+	font-size: 20px;
+	margin-bottom: 0;
+}
+
+.menu-composition {
+	font-size: 10px;
+	color: rgba(0, 0, 0, 0.5);
+}
+
+.category a img {
+	position: absolute;
+	top: 0%;
+	right: -15%;
+}
+
+/* ------------------------- FOOTER ------------------------- */
+
+footer {
+	position: fixed;
+	bottom: 0;
+	background-color: white;
+	-webkit-box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.25);
+	-moz-box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.25);
+	box-shadow: 0 -4px 25px -6px rgba(0, 0, 0, 0.25);
+	text-align: center;
+	height: 10vh;
+	width: 100%;	
+	overflow: hidden;
+}
+
+footer img {
+	width: auto;
+	height: 70%;
+	margin-right: 3%;
+	margin: 3%;
+}
+
+footer a {
+	text-decoration: none;
+}
