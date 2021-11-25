@@ -10,7 +10,7 @@ I have added a few screenshots of pages of the application we built during my in
 
 All the documentation and guides within this repo are redacted in french. My goal was to write comprehensive resources for other junior developers and interns to quickly understand the project and get a handle on the source code.
 
-Here are a few illustrations of pages of the app we built (you may find all the images used in this repo under <code>/documentation/images/</code>):
+Here are a few illustrations of some pages of the app we built (you may find all the images used in this repo under <code>/documentation/images/</code>):
 
 <table>
   <tr>
