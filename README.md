@@ -12,14 +12,24 @@ All the documentation and guides within this repo are redacted in french. My goa
 
 Here are a few illustrations of pages of the app we built (you may find all the images used in this repo under <code>/documentation/images/</code>):
 
-<img src="./documentation/images/screenshot_1.png" alt="Screenshot of the app's prototype">
-<img src="./documentation/images/screenshot_2.png" alt="Screenshot of the app's prototype">
-<img src="./documentation/images/screenshot_3.png" alt="Screenshot of the app's prototype">
-<img src="./documentation/images/screenshot_4.png" alt="Screenshot of the app's prototype">
-<img src="./documentation/images/screenshot_5.png" alt="Screenshot of the app's prototype">
-<img src="./documentation/images/screenshot_6.png" alt="Screenshot of the app's prototype">
-<img src="./documentation/images/screenshot_7.png" alt="Screenshot of the app's prototype">
-<img src="./documentation/images/screenshot_8.png" alt="Screenshot of the app's prototype">
+<table>
+  <tr>
+    <td><img src="./documentation/images/screenshot_1.png" alt="Screenshot of the app's prototype"></td>
+    <td><img src="./documentation/images/screenshot_2.png" alt="Screenshot of the app's prototype"></td>
+  </tr>
+  <tr>
+    <td><img src="./documentation/images/screenshot_3.png" alt="Screenshot of the app's prototype"></td>
+    <td><img src="./documentation/images/screenshot_4.png" alt="Screenshot of the app's prototype"></td>
+  </tr>
+  <tr>
+    <td><img src="./documentation/images/screenshot_5.png" alt="Screenshot of the app's prototype"></td>
+    <td><img src="./documentation/images/screenshot_6.png" alt="Screenshot of the app's prototype"></td>
+  </tr>
+  <tr>
+    <td><img src="./documentation/images/screenshot_7.png" alt="Screenshot of the app's prototype"></td>
+    <td><img src="./documentation/images/screenshot_8.png" alt="Screenshot of the app's prototype"></td>
+  </tr>
+</table>
 
 _____________________________________________________________________________
 
