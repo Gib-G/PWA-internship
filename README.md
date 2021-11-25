@@ -31,7 +31,7 @@ Voir <code>/documentation/README.txt</code> pour plus d'explications sur le cont
 
 <strong>
   IMPORTANT POUR LES DÉVELOPPEURS FRONT PRINCIPALEMENT : <br>
-  Le design de l'application client est exposé dans <a href="https://www.figma.com/files/team/989462810242774600/SPEAT?fuid=988793062537224892">ce projet Figma</a>. Merci de s'y   référer pour prendre connaissance des pages que doit posséder l'application client.
+  Le design de l'application client est exposé dans <a href="">ce projet Figma</a> (lien supprimé pour protéger la propriété de l'entreprise). Merci de s'y   référer pour prendre connaissance des pages que doit posséder l'application client.
 </strong><br><br>
   
 L'application client est une <i>Single Page Application</i> (SPA) (voir 
