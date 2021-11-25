@@ -4,10 +4,17 @@ This repo contains the documentation and guides I redacted for a progressive web
 The app is meant to offer a collaborative food delivery service.
 
 The source code is hosted on a private repo of mine and has been removed from this public repo as the app is considered proprietary software. All sensitive information regarding the company has also been removed.
+If you still wish to get a demo of the app, please contact me at gibril.gunder@outlook.fr.
 
-You can still have a look at the prototype of the client PWA <a href="">HERE</a>. Keep in mind this is only a prototype for the client app. It is not yet linked to the back end logic (an API built with Symfony and API Platform) whose development I supervised too during my internship. Most of the code for this front end was made by interns in less than 4 weeks with no review from more experienced developers. Thus, it is obviously flawed : I only captured a snapshot of the project when I left the company. My goal with this repo is not to showcase the source code - which is impossible anyway due to the fact that the app is proprietary, but rather illustrate the work I did when supervising the creation of this prototype.
+I have added a few screenshots of pages of the application we built during my internship (see bellow). Those illustrations only come from a prototype of the client app which is not yet linked to the back end logic (a REST API built with Symfony and API Platform whose development I also supervised partly). Most of the code for this front end was made by interns in less than 4 weeks with no review from more experienced developers. Thus, it is obviously flawed : I only captured a snapshot of the project when I left the company. My goal with this repo is not to showcase the source code - which is impossible anyway due to the fact that the app is proprietary, but rather illustrate the work I did when supervising the creation of this prototype.
 
 All the documentation and guides within this repo are redacted in french. My goal was to write comprehensive resources for other junior developers and interns to quickly understand the project and get a handle on the source code.
+
+Here are a few illustrations of pages of the app we built (you may find all the images used in this repo under <code>/documentation/images/</code>):
+
+<img src="./documentation/images/" alt="Screenshot of the app's prototype">
+<img src="./documentation/images/" alt="Screenshot of the app's prototype">
+<img src="./documentation/images/" alt="Screenshot of the app's prototype">
 
 _____________________________________________________________________________
 
