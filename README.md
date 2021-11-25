@@ -12,9 +12,14 @@ All the documentation and guides within this repo are redacted in french. My goa
 
 Here are a few illustrations of pages of the app we built (you may find all the images used in this repo under <code>/documentation/images/</code>):
 
-<img src="./documentation/images/" alt="Screenshot of the app's prototype">
-<img src="./documentation/images/" alt="Screenshot of the app's prototype">
-<img src="./documentation/images/" alt="Screenshot of the app's prototype">
+<img src="./documentation/images/screenshot_1" alt="Screenshot of the app's prototype">
+<img src="./documentation/images/screenshot_2" alt="Screenshot of the app's prototype">
+<img src="./documentation/images/screenshot_3" alt="Screenshot of the app's prototype">
+<img src="./documentation/images/screenshot_4" alt="Screenshot of the app's prototype">
+<img src="./documentation/images/screenshot_5" alt="Screenshot of the app's prototype">
+<img src="./documentation/images/screenshot_6" alt="Screenshot of the app's prototype">
+<img src="./documentation/images/screenshot_7" alt="Screenshot of the app's prototype">
+<img src="./documentation/images/screenshot_8" alt="Screenshot of the app's prototype">
 
 _____________________________________________________________________________
 
