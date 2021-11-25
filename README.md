@@ -43,8 +43,10 @@ Voir <code>/documentation/README.txt</code> pour plus d'explications sur le cont
 
 <strong>
   IMPORTANT POUR LES DÉVELOPPEURS FRONT PRINCIPALEMENT : <br>
-  Le design de l'application client est exposé dans <a href="">ce projet Figma</a> (lien supprimé pour protéger la propriété de l'entreprise). Merci de s'y   référer pour prendre connaissance des pages que doit posséder l'application client.
+  Le design de l'application client est exposé dans <a href="">ce projet Figma</a> (lien supprimé pour protéger la propriété de l'entreprise : ci-dessous, une illustration d'une partie du projet Figma). Merci de s'y   référer pour prendre connaissance des pages que doit posséder l'application client.
 </strong><br><br>
+
+<img src="./documentation/images/figma.png" alt="Capture d'écran du projet Figma sur lequel nous travaillions">
   
 L'application client est une <i>Single Page Application</i> (SPA) (voir 
 <a href="https://blog.octo.com/a-la-decouverte-des-architectures-du-front-3-4-les-single-page-applications/">ici</a>, 
