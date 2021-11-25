@@ -1,6 +1,0 @@
-# Le répertoire /tls/ contient le certificat et la clé privée TLS/SSL nécessaires pour servir l'application en HTTPS.
-# Chaque développeur travaillant sur l'application client doit posséder sa propre paire certificat/clé privée (générée 
-# avec mkcert, ou autre).
-# Il n'est donc pas nécessaire de suivre ce dossier /tls/ avec Git.
-/tls/
-*.pem
